@@ -4,3 +4,17 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 # [Mapbox](https://www.mapbox.com/)
 
+# Uso de Mapbox
+- [Instalación](https://www.mapbox.com/install/javascript/bundler-install/)
+```
+npm install mapbox-gl --save
+```
+- Uso de css
+```
+<link href='https://api.mapbox.com/mapbox-gl-js/v2.8.1/mapbox-gl.css'rel='stylesheet'>
+```
+
+# Agregando tipado para Mapbox
+```
+npm i --save-dev @types/mapbox-gl
+```
