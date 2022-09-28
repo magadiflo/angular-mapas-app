@@ -41,6 +41,12 @@ export class ZoomRangeComponent implements AfterViewInit {
     this.mapa.on('zoom', (event) => {
       this.zoomLevel = this.mapa.getZoom();
     });
+
+    this.mapa.on('zoomend', (event) => {
+      if (this.mapa.getZoom() > 18) {
+        this.mapa.zoomTo(18);
+      }
+    });
   }
 
   zoomOut() {
@@ -49,6 +55,10 @@ export class ZoomRangeComponent implements AfterViewInit {
 
   zoomIn() {
     this.mapa.zoomIn();
+  }
+
+  zoomCambio(valor: string) {
+    this.mapa.zoomTo(Number(valor));
   }
 
 }
