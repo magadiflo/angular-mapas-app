@@ -9,15 +9,13 @@ import * as mapboxgl from 'mapbox-gl';
       width: 100%;
       height: 100%;
     }
-    
-    .row {
+
+    .list-group {
       position: fixed;
-      border-radius: 5px;
-      bottom: 50px;
-      left: 50px;
-      padding: 10px; 
-      background-color: white;
+      top: 20px;
+      right: 20px;
       z-index: 999;
+      cursor: pointer;
     }
     `
   ]
@@ -38,10 +36,20 @@ export class MarcadoresComponent implements AfterViewInit {
       center: this.coordenadas,
       zoom: this.zoomLevel,
     });
+  }
 
-    const marker = new mapboxgl.Marker()
+  agregarMarcador(): void {
+    const color = "#xxxxxx".replace(/x/g, y => (Math.random() * 16 | 0).toString(16));
+    const nuevoMarcador = new mapboxgl.Marker({
+      draggable: true,
+      color
+    })
       .setLngLat(this.coordenadas)
       .addTo(this.mapa);
+  }
+
+  irMarcador(): void {
+    
   }
 
 }
