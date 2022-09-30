@@ -18,3 +18,14 @@ npm install mapbox-gl --save
 ```
 npm i --save-dev @types/mapbox-gl
 ```
+
+# Proyecto en producción
+El proyecto fue subido a netlify: 
+```
+https://app.netlify.com/teams/magadiflo/overview
+```
+
+Enlace del proyecto:
+```
+https://peaceful-moxie-efb2a7.netlify.app/mapas/propiedades
+```
